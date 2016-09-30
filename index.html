@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>MY site</title> 
+	<link rel="stylesheet" href="css/style.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.8/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+  
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#/home"  onclick="closeNav()" >Home</a>
+    <a href="#/services"  onclick="closeNav()">Services</a>
+    <a href="#/about"  onclick="closeNav()">About us</a>
+    <a href="#/contact"  onclick="closeNav()">Contact us</a>
+  </div>
+</div>
+	<nav class="sitemenu">
+		<div class="navwraper" >
+			<ul class="topnav" id="myTopnav">
+				<li class="branding" id="brand"><a href="#">Yassir Smaili</a></li>
+				<li class="active"><a href="#/home">Home</a></li>
+				<li><a href="#/services">Services</a></li>
+				<li><a href="#/about">About us</a></li>
+				<li><a href="#/contact">Contact us</a></li> 
+				 <li class="icon">
+					   <a href="javascript:void(0);" style="font-size:15px;" onclick="openNav()">☰</a>
+				  </li>
+				</ul>
+		</div>
+	</nav>
+
+	<main class="content">
+	<div ng-view>	</div>
+			
+	</main>
+  <script>
+  	$(function() { 
+   $("li").click(function() {
+   	         // remove classes from all
+      $("li").removeClass("active");
+      // add class to the one we clicked
+      $(this).addClass("active");
+   });
+});
+  </script>
+	<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+</body>
+</html>

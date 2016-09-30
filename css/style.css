@@ -1,0 +1,137 @@
+ul.topnav li:last-child
+{
+    float:right;
+}
+ul.topnav li.icon {display: none;}
+@media screen and (max-width:616px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:616px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+body
+{
+	margin:0;
+	padding: 0;
+	background-color: #FDF6E4;
+	font-family: helvetica,arial,sans-serif;
+}
+#brand {
+  pointer-events: none; 
+}
+.content{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.sitemenu {
+	width: 100%;
+	background: #A2CEA5; 
+	border-top: 8px solid #125678;
+}
+
+.sitemenu>.navwraper{
+	display: table;
+	margin: 0 auto;
+}
+
+.sitemenu ul {
+	padding: 0;
+	margin: 0;	
+	list-style-type: none;
+}
+
+.sitemenu ul li {
+	float: left;
+}
+.sitemenu ul li a {
+	float: left;
+	text-decoration: none;
+	padding: 0 15px;
+	line-height: 50px;
+	color: white;
+}
+.sitemenu ul li a:hover {
+background-color: #45B29D;
+}
+.sitemenu ul li.active{
+	background-color: #FDF6E4; 
+}
+.sitemenu ul li.active a{
+ color:#279182;
+}
+
+.sitemenu li.branding a {
+	color:#1E9382;
+	font-size: 2em;
+	font-weight: bold;
+}
